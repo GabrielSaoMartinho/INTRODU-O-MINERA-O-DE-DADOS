@@ -1,0 +1,19 @@
+import numpy as np
+
+listaPeso = np.array([40,5,0.4,3,0.5,0.05,20,23,4000,35])
+listaTempo = np.array([4380,5400,21900,14600,1460,730,6205,14600,17520,24455])
+
+print(f"Média dos pesos:{np.mean(listaPeso)}")
+print(f"Desvio padrão dos pesos:{np.std(listaPeso)}")
+print(f"Média do tempo de vida:{np.mean(listaTempo)}")
+print(f"Desvio padrão do tempo de vida:{np.std(listaTempo)}\n")
+
+print("Z-score para os valores do Peso")
+for c in range(0,len(listaPeso)):
+    Zscore = (listaPeso[c]-np.mean(listaPeso))/np.std(listaPeso)
+    print(f"z{c+1} = {Zscore}")
+
+print("\nZ-score para os valores do Tempo de Vida")
+for c in range(0,len(listaTempo)):
+    Zscore = (listaTempo[c]-np.mean(listaTempo))/np.std(listaTempo)
+    print(f"z{c+1} = {Zscore}")
