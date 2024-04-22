@@ -13,9 +13,8 @@ z_peso = (listaPeso - media_peso) / desvio_peso
 z_tempo = (listaTempo - media_tempo) / desvio_tempo
 
 nomes_animais = ["Shih-tzu", "Gato persa", "Papagaio", "Preguiça", "Peixe-palhaço", "Camarão", "Tatu", "Ema", "Corvo", "Tartaruga Mordedora"]
-plt.figure(figsize=(12, 6))
 
-plt.subplot(1, 2, 1)
+plt.figure(figsize=(8, 6))
 for i in range(len(listaPeso)):
     plt.scatter(listaPeso[i], listaTempo[i], label=nomes_animais[i])
 plt.xlabel("Peso Médio [kg]")
@@ -24,8 +23,9 @@ plt.title("Dispersão - Valores Normais")
 plt.xlim(-1000, 25000)
 plt.ylim(-1000, 25000)
 plt.legend()
+plt.show()
 
-plt.subplot(1, 2, 2)
+plt.figure(figsize=(8, 6))
 for i in range(len(z_peso)):
     plt.scatter(z_peso[i], z_tempo[i], label=nomes_animais[i])
 plt.xlabel("Z-score do Peso")
@@ -34,6 +34,4 @@ plt.title("Dispersão - Z-score")
 plt.xlim(-1.5, 3.5)
 plt.ylim(-1.5, 3.5)
 plt.legend()
-
-plt.tight_layout()
 plt.show()
