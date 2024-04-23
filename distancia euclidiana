@@ -1,0 +1,14 @@
+import numpy as np
+import math
+
+listaPeso = np.array([7.5, 6, 0.4, 3, 0.15, 0.05, 20, 23, 1.3, 10])
+listaTempo = np.array([5840, 4380, 21900, 14600, 1825, 730, 6205, 14600, 3650, 10950])
+
+distancia_euclidiana = math.sqrt(np.sum((listaPeso - listaTempo) ** 2))
+print("A distância euclidiana:", distancia_euclidiana)
+
+
+listaPesozscore = np.array([0.045,-0.144,-0.854,-0.524,-0.886,-0.898,1.630,2.010,-0.740,0.362])
+listaTempozscore = np.array([-0.406,-0.632,2.078,0.948,-1.027,-1.197,-0.350,0.948,0.745,0.384])
+distancia_euclidiana_zscore = math.sqrt(np.sum((listaPesozscore - listaTempozscore) ** 2))
+print("A distância euclidiana:", distancia_euclidiana_zscore)
